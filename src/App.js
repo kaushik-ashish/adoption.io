@@ -1,25 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import {Navbar,Nav,Container} from 'react-bootstrap'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import TableData from './table';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+function App(){
+  return(
+    <div className='App'>
+
+     <>
+     <Navbar >
+    <Container>
+      <Navbar.Brand >Company logo</Navbar.Brand>
+    </Container>
+  </Navbar>
+  <br />
+     
+  <Navbar >
+    <Container>
+      <Navbar.Brand href="#home">Dashboard</Navbar.Brand>
+    </Container>
+  </Navbar>
+  <br />
+  <Navbar >
+    <Container>
+      <Navbar.Brand href="#form">Adopta a pet</Navbar.Brand>
+    </Container>
+  </Navbar>
+  <TableData/>
+ 
+
+
+</>
     </div>
   );
 }
-
 export default App;
